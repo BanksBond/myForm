@@ -1,5 +1,5 @@
 import { useState } from "react";
-import "./DataTable.css"; // Import custom CSS for styling
+import "./DataTable.css";
 
 const DataTable = () => {
   const [data, setData] = useState([
@@ -75,9 +75,8 @@ const DataTable = () => {
     name: "",
     email: "",
     city: "",
-  }); // Add or edit user state
+  });
 
-  // Filtered data based on the search criteria
   const filteredData = data.filter(
     (item) =>
       item.name.toLowerCase().includes(searchName.toLowerCase()) &&
@@ -123,6 +122,7 @@ const DataTable = () => {
 
   return (
     <div className="data-table-container">
+      <h1>Data Form Searching </h1>
       <div className="search-boxes">
         <input
           type="text"
